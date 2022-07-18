@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Righteous, arial; 
+}
+
+body{
+    background-color: #eeeeee;
+}
+
+header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    height: 20rem;
+    padding: 3rem;
+
+    background-image: url(../images/cap.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+header span{
+    background-color: #00002C55;
+    border-radius: .3rem;
+
+    width: 35rem;
+    height: 5rem;
+
+    position: absolute;
+    left: 0;
+    z-index: 0;
+}
+
+header h1{
+    color: #F0FF00;
+    font-size: 3rem;
+    z-index: 1;
+}
+
+section#cards {
+    background: rgb(239,82,41);
+    background: linear-gradient(90deg, rgba(239,82,41,1) 18%, rgba(160,204,80,1) 95%);
+
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0.3rem 2rem;
+}
+
+article.card{
+    position: relative;
+    perspective: 1000px;
+}
+
+article.card .flip{
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    display: flex;
+    /* position: relative; */
+}
+
+article.card:hover .flip{
+    transform: rotateY(180deg);
+}
+
+.card_front, .card_back {
+    background-color: #3C3E44;
+    border-radius: .5rem;
+    margin: 4px 0;
+
+    text-align: center;
+    height: 20rem;
+    width: 12rem;
+    
+    /* position:absolute; */
+    backface-visibility: hidden;
+}
+
+div.card_back{
+    transform: rotateY(180deg);
+    padding: 1rem;
+}
+
+img.image {
+    /* object-fit: cover; */
+    object-position: center;
+    border-radius: .5rem 0 0 .5rem;
+    height: 10rem;
+}
+
+.card_front, .card_back div {
+    padding: 1rem;
+}
+
+h2.name {
+    color: #ededed;
+}
+
+p.descrip {
+    padding-bottom: 10px;
+}
+
+.card_front, .card_back h4 {
+    color: #a4a4a4;
+    padding: 5px 0;
+    font-weight: 400;
+}
+
+.card_front, .card_back p {
+    color: #ededed;
+}
+
+/*  ***************************************************************************** */
+/*style footer*/
+footer{
+  
+  color: black;
+
+  text-align: center;
+  font-size: 0.8rem;
+
+  cursor: pointer;
+  text-decoration: none;
+  
+}
+ 
+/********************************************************************************/
