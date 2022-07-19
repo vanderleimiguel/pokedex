@@ -11,6 +11,11 @@ body{
     background-color: #eeeeee;
 }
 
+html{
+    scroll-behavior: smooth;
+  }
+
+
 header{
     display: flex;
     justify-content: flex-start;
@@ -47,29 +52,28 @@ header h1{
 section#cards {
     background: rgb(239,82,41);
     background: linear-gradient(90deg, rgba(239,82,41,1) 18%, rgba(160,204,80,1) 95%);
+    padding: 0.3rem 2rem;
 
     max-width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    padding: 0.3rem 2rem;
+    
 }
 
 article.card{
-    position: relative;
+    
     perspective: 1000px;
 }
 
 article.card .flip{
     transition: transform 0.5s;
     transform-style: preserve-3d;
-    display: flex;
-    /* position: relative; */
 }
 
 article.card:hover .flip{
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
 }
 
 .card_front, .card_back {
@@ -81,8 +85,12 @@ article.card:hover .flip{
     height: 20rem;
     width: 12rem;
     
-    /* position:absolute; */
     backface-visibility: hidden;
+    cursor: pointer;
+}
+
+div.card_front{
+    position: absolute;
 }
 
 div.card_back{
@@ -91,7 +99,6 @@ div.card_back{
 }
 
 img.image {
-    /* object-fit: cover; */
     object-position: center;
     border-radius: .5rem 0 0 .5rem;
     height: 10rem;
@@ -109,13 +116,13 @@ p.descrip {
     padding-bottom: 10px;
 }
 
-.card_front, .card_back h4 {
+.card_front h4, .card_back h4 {
     color: #a4a4a4;
     padding: 5px 0;
     font-weight: 400;
 }
 
-.card_front, .card_back p {
+.card_front p, .card_back p {
     color: #ededed;
 }
 
