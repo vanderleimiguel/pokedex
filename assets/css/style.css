@@ -175,4 +175,9 @@ footer #footer{
 
 /********************************************************************************/
 /* mediaquery */
-@media (max-width: 920px){}
+@media (max-width: 920px){
+    .card_front, .card_back {
+        height: 20rem;
+        width: 18rem;
+    }
+}

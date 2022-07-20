@@ -7,12 +7,13 @@ let page = 1
 async function pokedex() {
   let pokeImage = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${page}.png`
 
+  let response = await fetch(`https://pokeapi.co/api/v2/pokemon/${page}`)
+  let data = await response.json()
+
   let response2 = await fetch(
     `https://pokeapi.co/api/v2/pokemon-species/${page}`
   )
-  let response = await fetch(`https://pokeapi.co/api/v2/pokemon/${page}`)
 
-  let data = await response.json()
   let data2 = await response2.json()
 
   let pokeName = data.name
