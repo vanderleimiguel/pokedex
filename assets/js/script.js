@@ -13,19 +13,19 @@ async function pokedex() {
   let response2 = await fetch(
     `https://pokeapi.co/api/v2/pokemon-species/${page}`
   )
-
   let data2 = await response2.json()
+  let pokeDescrip = data2.flavor_text_entries[0].flavor_text
 
   let pokeName = data.name
   let pokeId = data.id
   let pokeType = data.types[0].type.name
-  let pokeDescrip = data2.flavor_text_entries[0].flavor_text
 
   document.querySelector('#cards').insertAdjacentHTML(
     'beforeend',
     `
-  <article class="card">
+    <article class="card">
     <div class="flip">
+    
       <div class="card_front">
           <img class="image" src=${pokeImage}>
 
@@ -35,6 +35,7 @@ async function pokedex() {
               <h4>Type</h4>
               <p class="descrip">${pokeType}</p>
               
+              
           </div>
       </div>
     
@@ -43,10 +44,12 @@ async function pokedex() {
               <h2 class="name">${pokeName}</h2>
               <h4>Description</h4>
               <p class="descrip">${pokeDescrip}</p>
+              
           </div>
       </div>
-    </div>
+      </div>
   </article>
+   
       `
   )
 }

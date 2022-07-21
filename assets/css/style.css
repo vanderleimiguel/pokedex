@@ -66,6 +66,7 @@ section#cards {
     flex-wrap: wrap;
 }
 
+
 article.card{
     perspective: 1000px;
 }
@@ -86,7 +87,7 @@ article.card:hover .flip{
     border: solid 1px rgb(52, 198, 149);
 
     text-align: center;
-    height: 20rem;
+    height: 22rem;
     width: 12rem;
     
     backface-visibility: hidden;
@@ -177,7 +178,7 @@ footer #footer{
 /* mediaquery */
 @media (max-width: 920px){
     .card_front, .card_back {
-        height: 20rem;
+        height: 22rem;
         width: 18rem;
     }
 }
