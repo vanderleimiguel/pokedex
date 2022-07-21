@@ -58,22 +58,15 @@ async function pokedex2() {
   )
 }
 
-//chamada da primeira lista na pagina inicial
-let n = 1
-while (n < 13) {
-  pokedex1()
-  pokedex2()
-  page++
-  n++
-}
+viewMore()
 
 //função para botão de ver mais pokemons
 function viewMore() {
-  let n2 = 1
-  while (n2 < 13) {
+  let n1 = 1
+  while (n1 < 13) {
     pokedex1()
     pokedex2()
     page++
-    n2++
+    n1++
   }
 }
