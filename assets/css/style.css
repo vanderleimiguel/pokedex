@@ -184,14 +184,18 @@ footer #footer{
     }
 
     header span{
-    
-        width: 15rem;
-        height: 2rem;
-    
-        bottom: 5;
+        display: none;
     }
     
     header h1{
-       font-size: 1rem;
+        display: none;
+ 
+    }
+}
+
+@media (max-width: 350px){
+    .card_front, .card_back {
+        height: 22rem;
+        width: 15rem;
     }
 }
