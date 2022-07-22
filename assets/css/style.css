@@ -81,7 +81,6 @@ article.card:hover .flip{
 }
 
 .card_front, .card_back {
-    background-color: #9aa507;
     border-radius: .5rem;
     margin: 4px 0;
     border: solid 1px rgb(52, 198, 149);
@@ -101,11 +100,13 @@ img.image {
 }
 
 div.card_front{
+    background-color: #9aa507;
     position: absolute;
     padding: 1rem;
 }
 
 div.card_back{
+    background-color: #4b4e16;
     transform: rotateY(180deg);
     padding: 1rem;
 }

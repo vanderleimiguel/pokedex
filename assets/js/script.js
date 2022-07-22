@@ -10,7 +10,7 @@ async function pokedex1() {
     `https://pokeapi.co/api/v2/pokemon-species/${page}`
   )
   let data1 = await response1.json()
-  pokeDescrip = data1.flavor_text_entries[0].flavor_text
+  pokeDescrip = data1.flavor_text_entries[1].flavor_text
 }
 
 //Função para extrair nome, id, tipo e imagem da API
