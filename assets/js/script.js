@@ -23,7 +23,13 @@ async function pokedex2() {
   let data2 = await response2.json()
   let pokeName = data2.name
   let pokeId = data2.id
-  let pokeType = data2.types[0].type.name
+  let pokeType1 = data2.types[0].type.name
+  let poketype2 = ''
+  try {
+    poketype2 = data2.types[1].type.name
+  } catch (a) {
+    poketype2 = ''
+  }
 
   //dados que serão inseridos no HTML
   document.querySelector('#cards').insertAdjacentHTML(
@@ -39,7 +45,8 @@ async function pokedex2() {
               <h2 class="name">${pokeName}</h2>
               <p class="descrip">Nº ${pokeId}</p>
               <h4>Type</h4>
-              <p class="descrip">${pokeType}</p>     
+              <p class="descrip">${pokeType1}</p>
+              <p class="descrip">${poketype2}</p>
           </div>
       </div>
     
